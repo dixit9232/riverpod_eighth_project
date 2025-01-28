@@ -14,8 +14,7 @@ class HomeScreen extends ConsumerWidget {
             final stockPrice = ref.watch(streamProvider);
             return stockPrice.when(
                 data: (price) => Text(
-                      "Hello World!",
-                      // price.toStringAsFixed(2),
+                      price.toStringAsFixed(2),
                       style: TextTheme.of(context).bodyLarge,
                     ),
                 error: (error, stackTrace) => Text("Error : $error"),
